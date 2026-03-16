@@ -1,0 +1,93 @@
+.bienvenida {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background: var(--c-bg);
+}
+
+.bienvenida-hero {
+  flex: 0 0 45dvh;
+  position: relative;
+  overflow: hidden;
+  background: #111;
+}
+
+/* Motorcycle silhouette using CSS */
+.bienvenida-moto-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 60% at 70% 60%, rgba(229,62,0,.25) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 30% 40%, rgba(255,184,0,.08) 0%, transparent 60%);
+}
+
+.bienvenida-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background: linear-gradient(to bottom, transparent, var(--c-bg));
+}
+
+.bienvenida-logo {
+  position: absolute;
+  top: 32px;
+  left: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.bienvenida-content {
+  flex: 1;
+  padding: 24px 24px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.bienvenida-title {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+}
+
+.bienvenida-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.bienvenida-feature {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 14px;
+  color: var(--c-text-sec);
+  line-height: 1.4;
+}
+
+.bienvenida-feature-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-sm);
+  flex-shrink: 0;
+}
+
+.bienvenida-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: auto;
+}

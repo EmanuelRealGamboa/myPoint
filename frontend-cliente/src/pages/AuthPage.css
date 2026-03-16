@@ -1,0 +1,149 @@
+.auth-screen {
+  min-height: 100dvh;
+  background: var(--c-bg);
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 16px 8px;
+  padding-top: calc(16px + var(--safe-top));
+}
+
+.auth-header-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.auth-body {
+  flex: 1;
+  padding: 8px 24px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-title {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  margin-bottom: 6px;
+}
+
+.auth-subtitle {
+  font-size: 14px;
+  color: var(--c-text-sec);
+  margin-bottom: 28px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.auth-switch {
+  text-align: center;
+  font-size: 14px;
+  color: var(--c-text-sec);
+  margin-top: 16px;
+}
+
+.auth-link {
+  color: var(--c-primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* ── Registro — step indicator ── */
+.step-indicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 28px;
+}
+
+.step-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--c-border);
+  transition: background 250ms, transform 250ms;
+}
+
+.step-dot--active {
+  background: var(--c-primary);
+  transform: scale(1.3);
+}
+
+.step-dot--done {
+  background: var(--c-success);
+}
+
+/* ── Password strength ── */
+.pwd-strength {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.pwd-strength-bar {
+  display: flex;
+  gap: 4px;
+}
+
+.pwd-strength-seg {
+  flex: 1;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--c-border);
+  transition: background 250ms;
+}
+
+.pwd-strength-seg--weak   { background: var(--c-error); }
+.pwd-strength-seg--medium { background: var(--c-accent); }
+.pwd-strength-seg--strong { background: var(--c-success); }
+
+.pwd-strength-label {
+  font-size: 11px;
+  color: var(--c-text-sec);
+}
+
+/* ── Confetti / success step ── */
+@keyframes confettiFall {
+  0%   { transform: translateY(-20px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(60px)  rotate(360deg); opacity: 0; }
+}
+
+.success-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  padding-top: 40px;
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(34,197,94,.15);
+  border: 2px solid rgba(34,197,94,.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes popIn {
+  0%   { transform: scale(0); }
+  70%  { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+.success-icon svg {
+  animation: popIn 500ms cubic-bezier(.34,1.56,.64,1) 100ms both;
+}

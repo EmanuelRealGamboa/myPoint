@@ -1,0 +1,194 @@
+.home-header {
+  padding: 20px 20px 8px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.home-greeting {
+  font-size: 14px;
+  color: var(--c-text-sec);
+}
+
+.home-name {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+}
+
+.home-body {
+  padding: 12px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Points card */
+.home-points-card {
+  background: linear-gradient(135deg, #C93500 0%, #E53E00 50%, #FF6B35 100%);
+  border-radius: var(--r-lg);
+  padding: 20px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-points-card::before {
+  content: '';
+  position: absolute;
+  top: -30px; right: -30px;
+  width: 120px; height: 120px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.08);
+}
+
+.home-points-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.home-points-label {
+  font-size: 13px;
+  color: rgba(255,255,255,.8);
+  font-weight: 500;
+}
+
+.home-points-value {
+  font-size: 48px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.home-points-sub {
+  font-size: 13px;
+  color: rgba(255,255,255,.7);
+  margin-bottom: 14px;
+}
+
+.home-points-bar-bg {
+  height: 4px;
+  background: rgba(255,255,255,.25);
+  border-radius: 2px;
+  margin-bottom: 6px;
+  overflow: hidden;
+}
+
+.home-points-bar {
+  height: 100%;
+  background: #FFB800;
+  border-radius: 2px;
+  transition: width 600ms ease-out;
+}
+
+.home-points-hint {
+  font-size: 11px;
+  color: rgba(255,255,255,.65);
+}
+
+/* QR card */
+.home-qr-card {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-md);
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  transition: border-color 150ms;
+}
+
+.home-qr-card:active { border-color: var(--c-primary); }
+
+.home-qr-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--r-sm);
+  background: linear-gradient(135deg, var(--c-primary), #FF5722);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.home-qr-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.home-qr-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--c-text);
+}
+
+.home-qr-sub {
+  font-size: 12px;
+  color: var(--c-text-sec);
+}
+
+/* Last venta */
+.home-venta-card {
+  cursor: pointer;
+}
+
+.home-venta-card:active { border-color: var(--c-primary); }
+
+.home-venta-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.home-venta-sede {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--c-text-sec);
+  margin-bottom: 4px;
+}
+
+.home-venta-items {
+  font-size: 14px;
+  color: var(--c-text);
+  line-height: 1.4;
+}
+
+.home-venta-total {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--c-text);
+  white-space: nowrap;
+}
+
+.home-venta-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--c-border);
+  padding-top: 10px;
+  font-size: 12px;
+  color: var(--c-text-sec);
+}
+
+.home-venta-ticket {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--c-primary);
+  font-weight: 600;
+  font-size: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
